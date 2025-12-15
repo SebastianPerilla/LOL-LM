@@ -1,4 +1,4 @@
-.PHONY: refresh-rag help rag-info rag-remove-duplicates rag-clear refresh-rag-all
+.PHONY: refresh-rag help rag-info rag-remove-duplicates rag-clear refresh-rag-all run-app
 
 # Default number of articles to fetch (can be overridden)
 NUM_ARTICLES ?= 100
@@ -31,6 +31,9 @@ help:
 	@echo ""
 	@echo "Note: Categories are configured in src/pipelines/refresh_rag.py"
 	@echo "      Available: business, entertainment, general, health, science, sports, technology"
+	@echo ""
+	@echo "  App:"
+	@echo "    make run-app                 - Run the Streamlit satirical news app"
 
 refresh-rag:
 	@echo "Refreshing RAG with $(NUM_ARTICLES) articles from all categories..."
@@ -64,3 +67,7 @@ rag-remove-duplicates:
 rag-clear:
 	@echo "Clearing RAG collection..."
 	@uv run python src/pipelines/rag_manage.py clear
+
+run-app:
+	@echo "Starting Streamlit app..."
+	@uv run streamlit run src/streamlit.py
