@@ -2,7 +2,23 @@
 Satirical News Generator
 
 
+# Installation
 
+```bash
+uv venv .venv
+```
+
+```bash
+source .venv/bin/activate
+```
+or in windows:
+```bash
+.venv\Scripts\activate
+```
+
+```bash
+uv sync
+```
 
 ## RAG
 
