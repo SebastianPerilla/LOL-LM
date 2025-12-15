@@ -153,7 +153,7 @@ class ExtractorService:
                 return None
             
             # Extract as JSON with metadata
-            extracted_json = trafilatura.extract(downloaded, output_format="json", with_metadata=True)
+            extracted_json = trafilatura.extract(downloaded, output_format="json", with_metadata=True, include_comments=False, include_tables=False, no_fallback=True)
             if not extracted_json:
                 log.warning(f"Failed to extract content from {url}")
                 return None

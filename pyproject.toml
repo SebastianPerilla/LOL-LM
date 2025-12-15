@@ -23,4 +23,11 @@ dependencies = [
     "langchain-chroma>=0.1.0",
     "torch>=2.0.0",
     "python-dotenv>=1.0.0",
+    "pandas>=2.0.0",
+    "tqdm>=4.65.0",
+    "ipywidgets>=8.1.8",
+    "ipykernel>=7.1.0",
+    "datasets>=4.4.1",
+    "transformers>=4.57.3",
+    "accelerate>=1.12.0",
 ]
