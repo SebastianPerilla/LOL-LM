@@ -211,3 +211,4 @@ __marimo__/
 data/chromadb/
 data/real_news/
 data/fake_news/
+data/model/
